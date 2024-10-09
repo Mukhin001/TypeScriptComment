@@ -1,0 +1,140 @@
+type CommentData = {
+    idComment: number, 
+    name: string, 
+    comment: string,
+    date: string, 
+    answer?: [
+        {
+            idAnswer: number,
+            nameAnswer: string,
+            answerComment: string,
+            date: string,
+        }
+    ]
+};
+
+export const arrayComments: CommentData[] = [
+    {
+        idComment: 1,
+        name: 'Pavel',
+        comment: 'hi',
+        date: '15.09.2010', 
+        answer: [
+            {
+                idAnswer: 1,
+                nameAnswer: 'Egor',
+                answerComment: 'answer',
+                date: '03.11.2015', 
+            }
+        ],
+    },
+    {
+        idComment: 2,
+        name: 'Pavel',
+        comment: 'hi',
+        date: '03.11.2015', 
+        answer: [
+            {
+                idAnswer: 2,
+                nameAnswer: 'Egor',
+                answerComment: 'answer',
+                date: '03.11.2015', 
+            }
+        ],
+    },
+    {
+        idComment: 3,
+        name: 'Pavel',
+        comment: 'hi',
+        date: '25.05.2000', 
+        // answer: [
+        //     {
+        //         idAnswer: 3,
+        //         nameAnswer: 'Egor',
+        //         answerComment: 'hi',
+        //     }
+        // ],
+    },
+];
+
+
+// comments: [ 
+//     {   userName: 'Pavel',
+//         idComment: 1,
+//         userComment: 'Hello',
+//         date: '12.04.2008',
+//         time: '10:28',
+//         like: 15,
+//         dislike: 33,
+//         answer: [ 
+//             {   userNameAnswer: 'Viktor',
+//                 idAnswer: 1,
+//                 userCommentAnswer: 'Hello Pavel', 
+//                 date: '25.12.2015',
+//                 time: '10:28',
+//                 likeAnswer: 75,
+//                 dislikeAnswer: 3,
+//             },
+//             {   userNameAnswer: 'Alex',
+//                 idAnswer: 2,
+//                 userCommentAnswer: 'Hi Pavel',
+//                 date: '01.12.2013',
+//                 time: '22:22',
+//                 likeAnswer: 67,
+//                 dislikeAnswer: 63,
+//             },
+//             {   userNameAnswer: 'Alexey',
+//                 idAnswer: 3,
+//                 userCommentAnswer: 'Hi Pavel',
+//                 date: '01.12.2007',
+//                 time: '22:22',
+//                 likeAnswer: 50,
+//                 dislikeAnswer: 2,
+//             },
+//         ],
+//     }, 
+//     {   userName: 'Sasha',
+//         idComment: 2,
+//         userComment: 'Looook',
+//         date: '25.12.2015',
+//         time: '10:28',
+//         like: 190,
+//         dislike: 3,
+//         answer: [ 
+//             {   userNameAnswer: 'Mary',
+//                 idAnswer: 4,
+//                 userCommentAnswer: 'Hello Sasha',
+//                 date: '25.12.2015',
+//                 time: '10:28',
+//                 likeAnswer: 5,
+//                 dislikeAnswer: 3,
+//             },
+//             {   userNameAnswer: 'Kosty',
+//                 idAnswer: 5,
+//                 userCommentAnswer: 'Hi Sasha',
+//                 date: '01.12.2013',
+//                 time: '22:22',
+//                 likeAnswer: 5,
+//                 dislikeAnswer: 3,
+//             },
+//         ],
+//     }, 
+//     {   userName: 'Evgenya',
+//         idComment: 3,
+//         userComment: 'Hello Guys.',
+//         date: '03.08.2007',
+//         time: '10:28',
+//         like: 5,
+//         dislike: 3,
+//         answer: [
+//             {   userNameAnswer: 'Mary',
+//                 idAnswer: 6,
+//                 userCommentAnswer: 'Hello Sasha',
+//                 date: '25.12.2015',
+//                 time: '10:28',
+//                 likeAnswer: 5,
+//                 dislikeAnswer: 3,
+//             },
+//         ],
+//     },
+// ],
