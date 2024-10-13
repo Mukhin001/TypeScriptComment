@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import CommentFofm from './components/commentMain/CommentFofm.tsx';
+import CommentMain from './components/commentMain/CommentMain.tsx';
 import './App.css';
 
 const App: FC = () => {
     return ( 
         <div>
-           <CommentFofm />
+           <CommentMain />
         </div>
      );
 };

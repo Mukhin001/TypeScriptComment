@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, Dispatch, SetStateAction } from "react";
 import CommentsAnswer from "./commentsAnswer/CommentsAnswer.tsx";
 import ToAnswer from "./toAnswer/ToAnswer.tsx";
 
@@ -7,35 +7,42 @@ interface CommentsProps {
     name: string,
     comment: string,
     date: string,
-    answer?: [
+    answer: [
         {
             idAnswer: number,
             nameAnswer: string,
             answerComment: string,
             date: string,
         }
-    ],
+    ] | [],
 };
 
-const Comments: FC<CommentsProps> = ({ id, name, comment, date, answer }) => {
+interface setCommentsArrProps {
+    setCommentsArr: Dispatch<SetStateAction<any>> 
+};
+
+type Props = CommentsProps | setCommentsArrProps; 
+
+const Comments: FC<Props> = ( props ) => {
     
     return ( 
         <>
             <article>
-                <h4>{name}</h4>
-                <p>{comment}</p>
-                <strong>{id}</strong>
+                <h4>{props['name']}</h4>
+                <p>{props['comment']}</p>
+                <strong>{props['id']}</strong>
                 <section>
-                    <time>{date}</time>
+                    <time>{props['date']}</time>
                 </section>
 
-               <ToAnswer />
+               <ToAnswer id={props['id']}  answer={props['answer']} />
 
-                {answer?.map((e) => {
+                {props['answer'].map((e) => {
                     return (
                         <CommentsAnswer 
                             key={e.idAnswer + e.nameAnswer}
                             answer={e}
+                            
                         />
                     )
                 })}

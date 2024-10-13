@@ -3,14 +3,14 @@ type CommentData = {
     name: string, 
     comment: string,
     date: string, 
-    answer?: [
+    answer: [
         {
             idAnswer: number,
             nameAnswer: string,
             answerComment: string,
             date: string,
         }
-    ]
+    ] | []
 };
 
 export const arrayComments: CommentData[] = [
@@ -47,13 +47,7 @@ export const arrayComments: CommentData[] = [
         name: 'Pavel',
         comment: 'hi',
         date: '25.05.2000', 
-        // answer: [
-        //     {
-        //         idAnswer: 3,
-        //         nameAnswer: 'Egor',
-        //         answerComment: 'hi',
-        //     }
-        // ],
+        answer: [],
     },
 ];
 

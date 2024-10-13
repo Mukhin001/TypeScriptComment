@@ -13,7 +13,7 @@ interface CommentsAnswerProps {
 const CommentsAnswer:FC<CommentsAnswerProps> = ({ answer }) => {
     
     return ( 
-            <article style={{marginLeft: 50}}>
+            <article style={{marginLeft: 50}} data-answer='answer'>
                 <h4>{answer?.nameAnswer}</h4>
                 <p>{answer?.answerComment}</p>
                 <strong>{answer?.idAnswer}</strong>
